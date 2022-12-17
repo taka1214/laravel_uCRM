@@ -10,6 +10,7 @@ use App\Models\Customer;
 use App\Models\Item;
 use Illuminate\Support\Facades\DB;
 use App\Models\Order;
+use Illuminate\Http\Request;
 
 class PurchaseController extends Controller
 {
@@ -24,7 +25,6 @@ class PurchaseController extends Controller
         ->selectRaw('id, sum(subtotal) as total,
         customer_name, status, created_at')
         ->paginate(50);
-
         return Inertia::render('Purchases/Index', [
             'orders' => $orders
         ]);

@@ -26,4 +26,5 @@ class Purchase extends Model
         return $this->belongsToMany(Item::class)
         ->withPivot('quantity');
     }
+    
 }

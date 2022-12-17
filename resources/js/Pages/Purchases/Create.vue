@@ -89,7 +89,9 @@ const setCustomerId = id => {
 
                               <div class="p-2 w-full">
                                 <div class="relative">
-                                  <label for="customer" class="leading-7 text-sm text-gray-600">会員名</label>
+                                  <label for="customer" class="leading-7 text-sm text-gray-600">
+                                    会員名<span class="text-gray-600 text-xs">※片仮名で検索</span>
+                                  </label>
                                   <MicroModel @update:customerId="setCustomerId" />
                                   </div>
                               </div>
